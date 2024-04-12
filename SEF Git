@@ -1,0 +1,19 @@
+# include<stdio.h>
+# include<string.h>
+
+int main(void) {
+	char string[] = "I welcome you to warren's place of letter e";
+	char* ptrstring = string;
+	char character = 'e';
+
+
+	printf("I want to find the index of the occurrences of %C in the string %s\n", character, string);
+	while ((ptrstring = strchr(ptrstring, character)) != NULL) {
+		int index = ptrstring - string;
+
+		printf("Found %c at index %d\n", character, index);
+		ptrstring++;
+	}
+
+	return 0;
+}
